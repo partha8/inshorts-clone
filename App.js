@@ -1,10 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from "react-native";
+import InshortTabs from "./components/InshortTabs";
 
 export default function App() {
+  console.log(StatusBar);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={{ ...styles.container, backgroundColor: "#282c35" }}>
+      <InshortTabs />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +14,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
